@@ -1,0 +1,6 @@
+./tsconfig.json
+./next.config.js
+package.json
+.vscode
+./public
+.next
