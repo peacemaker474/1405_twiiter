@@ -1,5 +1,76 @@
 // .vscode/settings.json
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "editor.tabSize": 2,
+  "prettier.trailingComma": "es5",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true,
+      "source.sortMembers": true
+    },
+    "editor.rulers": [
+      {
+        "column": 120,
+        "color": "#00cc00"
+      }
+    ]
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true,
+      "source.sortMembers": true
+    },
+    "editor.rulers": [
+      {
+        "column": 120,
+        "color": "#00cc00"
+      }
+    ]
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true,
+      "source.sortMembers": true
+    },
+    "editor.rulers": [
+      {
+        "column": 120,
+        "color": "#00cc00"
+      }
+    ]
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true,
+      "source.sortMembers": true
+    },
+    "editor.rulers": [
+      {
+        "column": 120,
+        "color": "#00cc00"
+      }
+    ]
+  },
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+      "source.sortMembers": "explicit"
+    }
+  }
 }
