@@ -17,7 +17,8 @@
   "plugins": [
     "@typescript-eslint",
     "unused-imports",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "extends": [
     "next/core-web-vitals", 
@@ -65,6 +66,30 @@
     "react/jsx-pascal-case": "warn",
     // React useState 내 state 직접 수정 금지
     "react/no-direct-mutation-state": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+        "pathGroups": [
+          {
+            "pattern": "{next*,next*/**}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "{react*,react*/**}",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["@tanstack*"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ]
   },
   "settings": {
     "react": {
