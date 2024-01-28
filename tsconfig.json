@@ -20,7 +20,6 @@
         "name": "typescript-plugin-css-modules",
       },
     ],
-
     "paths": {
       "@/*": ["./src/*"],
     },
