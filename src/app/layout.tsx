@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: '1405 Twitter',
   description: 'Welcome to My Clone 1405 Twitter',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
