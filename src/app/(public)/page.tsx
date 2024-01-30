@@ -16,7 +16,7 @@ export default function Home() {
           계정 생성
         </Link>
         <span className={styles.loginText}> 이미 계정이 있으신가요? </span>
-        <Link href="/login" className={`${styles.signupLink} ${styles.loginLink}`}>
+        <Link href="/i/flow/login" className={`${styles.signupLink} ${styles.loginLink}`}>
           로그인
         </Link>
       </div>

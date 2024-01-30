@@ -3,10 +3,10 @@
 import Modal from '@/components/common/Modal';
 import styles from '@/styles/main/sign.module.scss';
 
-export default function LoginPage() {
+export default function SignupModalPage() {
   return (
     <Modal className={styles.wrapper}>
-      <div> 로그인 모달 </div>
+      <div> 회원가입 모달 </div>
     </Modal>
   );
 }
