@@ -5,7 +5,7 @@ import styles from '@/styles/main/sign.module.scss';
 
 export default function SignupModalPage() {
   return (
-    <Modal className={styles.wrapper}>
+    <Modal className={styles.container}>
       <div> 회원가입 모달 </div>
     </Modal>
   );

@@ -1,7 +1,87 @@
-.wrapper {
+.container {
   width: 100%;
   height: 100%;
 
   max-width: 600px;
   max-height: 650px;
+
+  position: relative;
+  gap: 2.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+
+  text-align: center;
+
+  margin-top: 70px;
+}
+
+.login-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.input-wrraper {
+  width: 80%;
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.input {
+  all: unset;
+
+  width: 100%;
+  height: 45px;
+
+  padding: 0 0.5rem;
+  margin: 0.7rem 0 0.3rem 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.error-text {
+  align-self: flex-end;
+
+  font-size: 0.7rem;
+  color: red;
+}
+
+.login-button {
+  all: unset;
+
+  width: 80%;
+
+  border-radius: 5px;
+
+  padding: 0.7rem 0;
+  box-sizing: border-box;
+
+  background-color: rgb(29, 155, 240);
+  color: white;
+  text-align: center;
+
+  cursor: pointer;
 }

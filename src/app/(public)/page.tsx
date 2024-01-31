@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './main.module.scss';
+import styles from '@/styles/main/main.module.scss';
 
 export default function Home() {
   return (

@@ -1,12 +1,5 @@
-'use client';
+import LoginModal from '@/app/(public)/_component/LoginModal';
 
-import Modal from '@/components/common/Modal';
-import styles from '@/styles/main/sign.module.scss';
-
-export default function LoginPage() {
-  return (
-    <Modal className={styles.wrapper}>
-      <div> 로그인 모달 </div>
-    </Modal>
-  );
+export default function Page() {
+  return <LoginModal />;
 }

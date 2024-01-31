@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { ComponentPropsWithRef, MouseEventHandler, ReactNode, useCallback, useRef } from 'react';
@@ -28,9 +29,21 @@ export const Modal = ({ children, className }: Props) => {
     [handleOnDismiss, overlay, container],
   );
 
+  const handlePreventCloseModal: MouseEventHandler = (event) => {
+    event.stopPropagation();
+  };
+
   return (
     <dialog className={styles.overlay} ref={overlay} onClick={handleCloseModal}>
-      <div className={`${styles.container} ${className}`} ref={container}>
+      <div className={`${styles.container} ${className}`} onClick={handlePreventCloseModal} ref={container}>
+        <Image
+          src="/assets/icons/x.svg"
+          width="40"
+          height="40"
+          alt="모달닫기_아이콘"
+          className={styles.cancel}
+          onClick={handleOnDismiss}
+        />
         {children}
       </div>
     </dialog>
