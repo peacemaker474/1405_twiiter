@@ -30,8 +30,8 @@ export default function LoginModal() {
   return (
     <Modal className={styles.container}>
       <h2 className={styles.title}> 로그인 </h2>
-      <form className={styles['login-form']} onSubmit={handleLoginSubmit}>
-        <div className={styles['input-wrraper']}>
+      <form className={styles.form} onSubmit={handleLoginSubmit}>
+        <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="login_userId">
             아이디
           </label>
@@ -44,7 +44,7 @@ export default function LoginModal() {
           />
           {error.userId && <span className={styles['error-text']}> {error.userId} </span>}
         </div>
-        <div className={styles['input-wrraper']}>
+        <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="login_password">
             비밀번호
           </label>
@@ -57,7 +57,7 @@ export default function LoginModal() {
           />
           {error.password && <span className={styles['error-text']}> {error.password} </span>}
         </div>
-        <button type="submit" className={styles['login-button']}>
+        <button type="submit" className={styles['sign-button']}>
           로그인
         </button>
       </form>

@@ -10,27 +10,27 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 
   text-align: center;
 
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
-.login-form {
+.form {
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.3rem;
+  gap: 0.5rem;
 
   padding: 0 2rem;
   box-sizing: border-box;
 }
 
-.input-wrraper {
+.input-wrapper {
   width: 80%;
   height: 100px;
 
@@ -69,7 +69,7 @@
   color: red;
 }
 
-.login-button {
+.sign-button {
   all: unset;
 
   width: 80%;
