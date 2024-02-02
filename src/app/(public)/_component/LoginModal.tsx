@@ -1,5 +1,7 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 import { useRef, useState } from 'react';
 
 import Modal from '@/components/common/Modal';
@@ -8,6 +10,7 @@ import styles from '@/styles/main/sign.module.scss';
 import type { LoginRequestDto } from '@/types/user';
 
 export default function LoginModal() {
+  const router = useRouter();
   const userIdRef = useRef<HTMLInputElement | null>(null);
   const passwordRef = useRef<HTMLInputElement | null>(null);
   const [error, setError] = useState<LoginRequestDto>({
@@ -25,6 +28,8 @@ export default function LoginModal() {
         password: passwordRef.current?.value === '' ? '비밀번호를 입력해주세요.' : '',
       }));
     }
+
+    router.push('/home');
   };
 
   return (
@@ -42,7 +47,11 @@ export default function LoginModal() {
             placeholder="아이디를 입력하세요"
             ref={userIdRef}
           />
-          {error.userId && <span className={styles['error-text']}> {error.userId} </span>}
+          {error.userId && (
+            <span className={styles['error-text']} aria-label="error-login-userId">
+              {error.userId}
+            </span>
+          )}
         </div>
         <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="login_password">
@@ -55,9 +64,13 @@ export default function LoginModal() {
             placeholder="비밀번호를 입력하세요"
             ref={passwordRef}
           />
-          {error.password && <span className={styles['error-text']}> {error.password} </span>}
+          {error.password && (
+            <span className={styles['error-text']} aria-label="error-login-password">
+              {error.password}
+            </span>
+          )}
         </div>
-        <button type="submit" className={styles['sign-button']}>
+        <button type="submit" className={styles['sign-button']} aria-label="login-button">
           로그인
         </button>
       </form>

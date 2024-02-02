@@ -12,7 +12,6 @@
     "test:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.202",
     "lodash": "^4.17.21",
     "next": "14.1.0",
     "react": "^18",
@@ -21,6 +20,7 @@
   "devDependencies": {
     "@playwright/test": "^1.41.1",
     "@svgr/webpack": "^8.1.0",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
