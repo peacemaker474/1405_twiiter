@@ -1,77 +1,17 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-
-import _ from 'lodash';
-
 import Modal from '@/components/common/Modal';
+import useSignupForm from '@/hooks/useSignupForm';
 import styles from '@/styles/main/sign.module.scss';
-import { SignupRequestDto } from '@/types/user';
-
-type SignupFormData = Omit<SignupRequestDto, 'profileImage'> & {
-  password2: string;
-};
 
 export default function SignupModal() {
-  const [userInput, setUserInput] = useState<SignupFormData>({
+  const initialState = {
     userId: '',
     nickName: '',
     password: '',
     password2: '',
-  });
-  const [error, setError] = useState<SignupFormData>({
-    userId: '',
-    nickName: '',
-    password: '',
-    password2: '',
-  });
-
-  const handleChangeUserInput = useCallback(
-    _.debounce((event: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = event.target as HTMLInputElement;
-
-      setUserInput((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-
-      if (value) {
-        setError((prev) => ({
-          ...prev,
-          [name]: '',
-        }));
-      }
-    }, 300),
-    [],
-  );
-
-  const handleSignupSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-
-    const { userId, nickName, password, password2 } = userInput;
-
-    if (userId === '' || nickName === '' || password === '') {
-      return setError((prev) => ({
-        ...prev,
-        userId: userId === '' ? '아이디를 입력해주세요.' : '',
-        nickName: nickName === '' ? '닉네임을 입력해주세요.' : '',
-        password: password === '' ? '비밀번호를 입력해주세요.' : '',
-      }));
-    }
-
-    if (password !== password2) {
-      return setError((prev) => ({
-        ...prev,
-        password2: '입력한 비밀번호가 일치하지 않습니다.',
-      }));
-    }
   };
-
-  useEffect(() => {
-    return () => {
-      handleChangeUserInput.cancel();
-    };
-  }, []);
+  const { error, handleChangeUserInput, handleSignupSubmit } = useSignupForm(initialState);
 
   return (
     <Modal className={styles.container}>
