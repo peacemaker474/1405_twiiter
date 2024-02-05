@@ -29,7 +29,11 @@ export default function SignupModal() {
             className={styles.input}
             placeholder="아이디를 입력하세요."
           />
-          {error.userId && <span className={styles['error-text']}> {error.userId} </span>}
+          {error.userId && (
+            <span className={styles['error-text']} id="error_userId">
+              {error.userId}
+            </span>
+          )}
         </div>
         <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="register_nickName">
@@ -43,7 +47,11 @@ export default function SignupModal() {
             className={styles.input}
             placeholder="닉네임을 입력하세요."
           />
-          {error.nickName && <span className={styles['error-text']}> {error.nickName} </span>}
+          {error.nickName && (
+            <span className={styles['error-text']} id="error_nickName">
+              {error.nickName}
+            </span>
+          )}
         </div>
         <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="register_password">
@@ -57,7 +65,11 @@ export default function SignupModal() {
             className={styles.input}
             placeholder="비밀번호를 입력하세요."
           />
-          {error.password && <span className={styles['error-text']}> {error.password} </span>}
+          {error.password && (
+            <span className={styles['error-text']} id="error_password">
+              {error.password}
+            </span>
+          )}
         </div>
         <div className={styles['input-wrapper']}>
           <label className={styles.label} htmlFor="register_password2">
@@ -71,7 +83,11 @@ export default function SignupModal() {
             className={styles.input}
             placeholder="비밀번호 확인을 위하여 입력해하세요."
           />
-          {error.password2 && <span className={styles['error-text']}> {error.password2} </span>}
+          {error.password2 && (
+            <span className={styles['error-text']} id="error_password2">
+              {error.password2}
+            </span>
+          )}
         </div>
         <button type="submit" className={styles['sign-button']}>
           회원가입
