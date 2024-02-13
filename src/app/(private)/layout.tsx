@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 import styles from '@/styles/main/privateMain.module.scss';
 
+import NavMenu from './_component/NavMenu';
+
 export default function PrivateLayout({
   children,
 }: Readonly<{
@@ -15,9 +17,10 @@ export default function PrivateLayout({
           <ul className={styles.globalMenu}>
             <Link href="/home" className={styles.logoLink}>
               <div className={styles.logoLinkWrapper}>
-                <Image src="/assets/icons/mainLogo.svg" width={25} height={25} alt="메인로고" />
+                <Image src="/assets/icons/mainLogo.svg" width={25} height={25} alt="메인로고" priority={true} />
               </div>
             </Link>
+            <NavMenu />
           </ul>
         </nav>
       </header>

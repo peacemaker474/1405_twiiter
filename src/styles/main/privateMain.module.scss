@@ -20,6 +20,10 @@
 }
 
 .globalMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   width: inherit;
   height: 100dvh;
 
