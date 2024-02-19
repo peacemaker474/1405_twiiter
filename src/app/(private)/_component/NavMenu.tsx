@@ -13,47 +13,26 @@ export default function NavMenu() {
     <>
       <li>
         <Link href="/home" className={styles.navLink}>
-          {segment === 'home' ? (
-            <>
-              <Image src="/assets/icons/activeHome.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span className={styles.active}> 홈 </span>
-            </>
-          ) : (
-            <>
-              <Image src="/assets/icons/home.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span> 홈 </span>
-            </>
-          )}
+          <Image src="/assets/icons/home.svg" width={26} height={26} alt="홈페이지_아이콘" />
+          <span className={segment === 'home' ? styles.active : ''}> 홈 </span>
         </Link>
       </li>
       <li>
         <Link href="/explore" className={styles.navLink}>
-          {segment === 'explore' ? (
-            <>
-              <Image src="/assets/icons/activeHome.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span className={styles.active}> 탐색하기 </span>
-            </>
-          ) : (
-            <>
-              <Image src="/assets/icons/home.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span> 탐색하기 </span>
-            </>
-          )}
+          <Image src="/assets/icons/search.svg" width={26} height={26} alt="검색_아이콘" />
+          <span className={segment === 'explore' ? styles.active : ''}> 탐색하기 </span>
         </Link>
       </li>
       <li>
         <Link href="/message" className={styles.navLink}>
-          {segment === 'message' ? (
-            <>
-              <Image src="/assets/icons/activeHome.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span className={styles.active}> 쪽지 </span>
-            </>
-          ) : (
-            <>
-              <Image src="/assets/icons/home.svg" width={26} height={26} alt="홈페이지_아이콘" />
-              <span> 쪽지 </span>
-            </>
-          )}
+          <Image src="/assets/icons/message.svg" width={26} height={26} alt="쪽지_아이콘" />
+          <span className={segment === 'message' ? styles.active : ''}> 쪽지 </span>
+        </Link>
+      </li>
+      <li>
+        <Link href="/profile" className={styles.navLink}>
+          <Image src="/assets/icons/profile.svg" width={26} height={26} alt="프로필_아이콘" />
+          <span className={segment === 'profile' ? styles.active : ''}> 프로필 </span>
         </Link>
       </li>
     </>

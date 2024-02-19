@@ -16,8 +16,58 @@
     color: white;
     font-size: 18px;
   }
+
+  & > svg {
+    fill: white;
+  }
 }
 
 .active {
   font-weight: bold;
+}
+
+.logoutButton {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+
+  width: 258px;
+  height: 66px;
+
+  padding: 12px;
+  margin: 12px 0;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  cursor: pointer;
+
+  background-color: black;
+  color: white;
+  text-align: left;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 33px;
+  }
+}
+
+.logoutUserImage {
+  display: flex;
+  align-items: center;
+
+  & > img {
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+
+.logoutUserName {
+  margin: 0 12px;
+
+  & > div:first-child {
+    font-weight: bold;
+  }
 }

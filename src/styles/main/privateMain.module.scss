@@ -20,6 +20,8 @@
 }
 
 .globalMenu {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -114,5 +116,30 @@
 
   &:hover {
     background-color: rgb(255, 255, 255, 0.1);
+  }
+}
+
+.postButton {
+  width: 234px;
+  height: 52px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 16px 0;
+  border: none;
+  border-radius: 26px;
+
+  background-color: rgb(29, 155, 240);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+  color: rgb(255, 255, 255);
+
+  font-size: 17px;
+
+  cursor: pointer;
+  
+  &:hover {
+    font-weight: 700;
   }
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from '@/styles/main/privateMain.module.scss';
 
 import NavMenu from './_component/NavMenu';
+import UserProfile from './_component/UserProfile';
 
 export default function PrivateLayout({
   children,
@@ -21,6 +22,10 @@ export default function PrivateLayout({
               </div>
             </Link>
             <NavMenu />
+            <Link href="/compose/tweet" className={styles.postButton}>
+              게시하기
+            </Link>
+            <UserProfile />
           </ul>
         </nav>
       </header>
