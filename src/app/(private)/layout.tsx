@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styles from '@/styles/main/privateMain.module.scss';
 
 import NavMenu from './_component/NavMenu';
+import RecommenSection from './_component/RecommendSection';
+import TrendSection from './_component/TrendSection';
 import UserProfile from './_component/UserProfile';
 
 export default function PrivateLayout({
@@ -33,10 +35,14 @@ export default function PrivateLayout({
         <section className={styles.rightWrapper}>
           <div className={styles.mainContent}>{children}</div>
           <div className={styles.rightContent}>
-            <form className={styles.search}>
-              <Image src="/assets/icons/search.svg" width={20} height={20} alt="검색_아이콘" />
-              <input type="search" className={styles.searchInput} />
-            </form>
+            <div style={{ marginBottom: 60, width: 350 }}>
+              <form className={styles.search}>
+                <Image src="/assets/icons/search.svg" width={20} height={20} alt="검색_아이콘" />
+                <input type="search" className={styles.searchInput} />
+              </form>
+            </div>
+            <TrendSection />
+            <RecommenSection />
           </div>
         </section>
       </main>
